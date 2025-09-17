@@ -1,0 +1,68 @@
+use clinica;
+
+/*INSERT into medico ( nome, especialidade, telefone, crm) values 
+("Dr. Carlos Souza", "Cardiologista", "4444-6666", "CRM12345")
+
+INSERT into medico ( nome, especialidade, telefone, crm) values 
+("Dr. Takoku Navara", "Urologista", "4545-5454", "CRM54321");
+
+INSERT into medico ( nome, especialidade, telefone, crm) values 
+("Dr. Tiragato Dakatola", "Dermatologista", "4545-5454", "CRM54321");
+
+INSERT into medico ( nome, especialidade, telefone, crm) values 
+("Dr. Noku Tiamo", "Oftalmologista", "8989-9898", "CRM13542");*/
+
+select * from medico where especialidade ="Urologista"
+
+
+/*INSERT into paciente ( nome, data_nascimento, telefone, endereco, cep, email) values 
+("Raul Guido da Silva", "2008-11-7", "4343-5466", "Rua Powerguido, n98 Barra Funda", "12-345-678", "annal@gmail.com");*/
+
+(1, 2, '2025-09-19 15:00:00', "Suspeita de Cancer de prostata")
+
+---------------------------------------------------------------------------------------------------------------------
+
+create database locadora
+
+tables com os objetos
+(variáveis dentro do table)
+
+inserts
+
+Cliente ( 1 cliente - n reservas
+id_cliente (chave primária)
+nome
+cpf
+telefone
+email
+endereco
+data_nascimento
+2. Carro (1 carro - n reservas
+id_carro (chave primária)
+modelo
+marca
+ano
+placa
+cor
+categoria (SUV, Sedan, Hatch, etc.)
+status (disponível, reservado, em manutenção)
+3. Reserva
+id_reserva (chave primária)
+id_cliente (chave estrangeira → Cliente)
+id_carro (chave estrangeira → Carro)
+data_reserva
+data_devolucao
+valor_total
+
+-----------------------------------------------------------------------------------------
+create table reserva(
+id_reserva int (11) not null AUTO_INCREMENT,
+FOREIGN KEY (id_cliente) REFERENCES (ID_Pai)
+id_carro int(11) DEFAULT NULL,
+data_reserva,
+data_devolucao,
+valor_total
+);
+---------------------------------------------------------------------------------------
+INSERT INTO reserva(id_cliente, id_carro, data_reserva, data_devolucao, valor_total) VALUES 
+("","","")
